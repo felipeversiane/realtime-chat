@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_htmx',
     'home',
     'users',
+    'chat'
 ]
 
 SITE_ID = 1
