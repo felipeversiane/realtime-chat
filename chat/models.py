@@ -15,7 +15,7 @@ class Modifier(models.Model):
         
 class ChatGroup(Modifier):
     group_name = models.CharField(max_length=128, null=False, blank=False, unique=True)
-    
+    users_online = models.ManyToManyField(get_user_model(),related_name='online_in_groups',blank=True)
     def __str__(self):
         return "{}".format(self.group_name)
 
